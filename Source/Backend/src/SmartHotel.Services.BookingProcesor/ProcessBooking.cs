@@ -16,7 +16,7 @@ namespace SmartHotel.Services.BookingProcesor
         [FunctionName("ProcessBooking")]
         public async static Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "HttpTriggerCSharp/name/{name}")]HttpRequestMessage req, string name, TraceWriter log)
         {
-            log.Info("C# HTTP trigger function processed a request.");
+            log.Info("C# HTTP trigger function processed a request. Kapeltol");
 
             var bookingProcesor = new Services.BookingProcesor();
             var bookingRequest = await req.Content.ReadAsAsync<BookingRequest>();
